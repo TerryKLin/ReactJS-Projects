@@ -62,11 +62,10 @@ class CountryList extends React.Component {
 
 {/*Country Markup, which includes image, description, who submitted it, and vote counts*/}
 class Country extends React.Component {
-  constructor(props) {
-    super(props);
+  handleUpVote = () => (
+    this.props.onVote(this.props.id)
+  );
 
-    this.handleUpVote = this.handleUpVote.bind(this);
-  }
 
   handleUpVote() {
     this.props.onVote(this.props.id);
